@@ -34,12 +34,12 @@ install-trapsmoniteur/ ├── README.md └── install.sh
 1. **Cloner le repository sur votre machine :**
 
    ```bash
-   git clone https://github.com/VOTRE_UTILISATEUR/nom_du_repo.git
+   git clone https://github.com/FranckCCC/Traps-moniteur-install.git
 
 2. **Se déplacer dans le répertoire cloné :**
 
    ```bash
-   cd nom_du_repo
+   cd Traps-moniteur-install
 
 3. **Exécuter le script avec les privilèges root :**
 
