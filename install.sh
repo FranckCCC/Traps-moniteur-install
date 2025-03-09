@@ -19,13 +19,15 @@ if [ -f /etc/mosquitto/conf.d/listeners.conf ]; then
     echo "Configuration Mosquitto sauvegardée en /etc/mosquitto/conf.d/listeners.conf.bak_$DATE"
 fi
 
-# Créer ou mettre à jour le fichier de configuration pour Mosquitto
+# Créer ou mettre à jour le fichier de configuration pour Mosquitto avec autorisation des connexions anonymes
 cat <<EOF > /etc/mosquitto/conf.d/listeners.conf
 listener 1883
 protocol mqtt
+allow_anonymous true
 
 listener 1884
 protocol websockets
+allow_anonymous true
 EOF
 
 # Redémarrer Mosquitto et activer son démarrage automatique
@@ -73,3 +75,7 @@ fi
 git clone https://github.com/FranckCCC/TrapsMoniteurMQTT /var/www/html
 
 echo "Installation terminée avec succès."
+echo "Le serveur Apache est accessible à l'adresse : http://$(hostname -I | cut -d' ' -f1)/"
+echo "Le serveur MQTT est accessible à l'adresse : $(hostname -I | cut -d' ' -f1)"
+echo "Le dépôt Git a été cloné dans /var/www/html/"
+echo "Vous pouvez maintenant accéder à l'interface web pour visualiser les données des capteurs."
