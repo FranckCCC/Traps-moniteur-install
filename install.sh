@@ -19,6 +19,9 @@ EOF
 # Redémarrer Mosquitto pour prendre en compte la nouvelle configuration
 systemctl restart mosquitto
 
+# S'assurer que Mosquitto se lance automatiquement au démarrage
+systemctl enable mosquitto
+
 # Installer Apache2, PHP, le module PHP pour Apache et Git
 apt-get install -y apache2 php libapache2-mod-php git
 
