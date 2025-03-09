@@ -38,10 +38,12 @@ install-trapsmoniteur/ ├── README.md └── install.sh
 
 2. **Se déplacer dans le répertoire cloné :**
 
+   ```bash
 cd nom_du_repo
 
 3. **Exécuter le script avec les privilèges root :**
 
+   ```bash
 sudo ./install.sh
 
 
