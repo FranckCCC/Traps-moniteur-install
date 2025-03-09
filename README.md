@@ -36,14 +36,16 @@ install-trapsmoniteur/ ├── README.md └── install.sh
    ```bash
    git clone https://github.com/VOTRE_UTILISATEUR/nom_du_repo.git
 
-2 - Se déplacer dans le répertoire cloné :
+2. **Se déplacer dans le répertoire cloné :**
 
 cd nom_du_repo
 
-3 - sudo ./install.sh
+3. **Exécuter le script avec les privilèges root :**
+
+sudo ./install.sh
 
 
-Fonctionnement du Script
+## Fonctionnement du Script
 Le script effectue les étapes suivantes :
 
 Mise à jour des paquets :
